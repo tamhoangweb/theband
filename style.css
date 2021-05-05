@@ -328,9 +328,13 @@ header .btn-menu:hover {
 .contact-container {
   padding: 32px 0;
   display: flex;
+  flex-direction: row;
 }
 .contact-container > * {
   flex-basis: 100%;
+}
+.contact-address {
+  margin-bottom: 16px;
 }
 .contact-address i {
   width: 30px;
@@ -363,6 +367,11 @@ header .btn-menu:hover {
   float: right;
 }
 
+@media (max-width: 600px) {
+  .contact-container {
+    flex-direction: column;
+  }
+}
 #map img {
   max-width: 100%;
   height: auto;

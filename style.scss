@@ -335,12 +335,17 @@ header .btn-menu {
   &-container {
     padding: 32px 0;
     display: flex;
+    flex-direction: row;
+
     & > * {
       flex-basis: 100%;
     }
   }
-  &-address i {
-    width: 30px;
+  &-address {
+    margin-bottom: 16px;
+    & i {
+      width: 30px;
+    }
   }
   &-form {
     position: relative;
@@ -370,7 +375,13 @@ header .btn-menu {
     }
   }
 }
-
+@media (max-width: 600px) {
+  .contact {
+    &-container {
+      flex-direction: column;
+    }
+  }
+}
 #map {
   & img {
     max-width: 100%;
