@@ -445,7 +445,32 @@ Dùng position:absolute cho nav2 để không chiếm không gian của slider. 
   }
 }
 ```
+CSS cho btn-menu
+```scss
+header .btn-menu {
+  @extend .btn-search;
+  display: none;
+  &:hover {
+    background-color: var(--clr-primary-100);
+    color: var(--clr-primary-900);
+  }
+}
+```
 B4: Dùng query @media để responsive
+```scss
+@media (max-width: 600px) {
+  /* Ẩn các menu item khác, để lại menu item Home */
+  nav ul.mainNav li:not(:first-child) {
+    display: none;
+  }
+  header .btn-search {
+    display: none;
+  }
+  header .btn-menu {
+    display: block;
+  }
+}
+```
 B5: Viết javascript cho sự kiện click vào btn-menu
 ```javascript
 let btnMenu = document.querySelector(".btn-menu");
